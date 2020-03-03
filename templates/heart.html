@@ -1,0 +1,137 @@
+<html>
+<style>
+    .navbar-text h1 {
+        color: #fff;
+        font-size: 40px;
+        align-content: center;
+    }
+    
+    body {
+        background-color: grey;
+    }
+    
+    form {
+        margin-top: 50px;
+        margin: auto;
+        width: 35%;
+        ;
+    }
+    
+    .result {
+        margin: auto;
+        width: 35%;
+        border: 1px solid #ccc;
+        background-color: grey;
+        color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        ;
+    }
+</style>
+
+<head>
+    <title>Heart Disease classification</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light bg-dark">
+        <span class="navbar-text">
+            <center>
+                 <h1>Heart Disease classification</h1>
+            </center>
+           
+        </span>
+    </nav>
+
+
+  <form action="{{ url_for('main') }}" enctype=multipart/form-data method="POST">
+        <div class="form-group">
+
+
+            <legend>Input Variables</legend>
+            <br>age:<br>
+
+            <input name="age" type="number" class="form-control" required>
+            <br>
+
+            <br> sex:<br>
+            <input name="sex" type="number" class="form-control" required>
+            <br>
+
+            <br>cp<br>
+            <input name="cp" type="number" class="form-control" required>
+            <br>
+
+            <br>trestbps<br>
+            <input name="trestbps" type="number" class="form-control" required>
+            <br>
+
+            <br>chol<br>
+            <input name="chol" type="number" class="form-control" required>
+            <br>
+
+            <br>fbs<br>
+            <input name="fbs" type="number" class="form-control" required>
+            <br>
+
+            <br>restecg<br>
+            <input name="restecg" type="number" class="form-control" required>
+            <br>
+
+            <br>car<br>
+            <input name="car" type="number" class="form-control" required>
+            <br> thalach<br>
+            <input name="thalach" type="number" class="form-control" required>
+            <br>
+
+            <br>exang<br>
+            <input name="exang" type="number" class="form-control" required>
+            <br>
+
+            <br>slope<br>
+            <input name="slope" type="number" class="form-control" required>
+
+            <br>
+
+             <br>ca<br>
+            <input name="ca" type="number" class="form-control" required>
+
+            <br>
+
+             <br>thal<br>
+            <input name="thal" type="number" class="form-control" required>
+
+
+
+            <br>
+            <input type="submit" class="btn btn-primary">
+
+
+
+
+        </div>
+
+    </form>
+        <div class="result" align="center">
+        {% if result %} {% for variable, value in original_input.items() %}
+        <b>{{ variable }}</b> : {{ value }} {% endfor %}
+        <br>
+        <br>
+        <h1>Result</h1>
+        <p style="font-size:50px">{{ result }}</p>
+        {% endif %}
+    </div>
+< <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

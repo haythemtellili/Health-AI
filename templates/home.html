@@ -8,8 +8,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Spam Detector</title>
+  <title>Health&AI</title>
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <!-- Bootstrap core CSS -->
   <link href="{{ url_for('static',filename='bootstrap.min.css')}}" rel="stylesheet">
 
@@ -21,7 +26,6 @@
   <!-- Custom styles for this template -->
   <link href="{{ url_for('static',filename='clean-blog.min.css')}}" rel="stylesheet">
  
-    <title></title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
@@ -30,12 +34,9 @@
 
 <body>
 
-
-
-
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="{{url_for('home')}}">Spam Detector</a>
+      <a class="navbar-brand" href="{{url_for('home')}}">Health&AI</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -60,7 +61,7 @@
 
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image:url('{{url_for('static',filename='spam1.png') }}')">
+  <header class="masthead" style="background-image:url('{{url_for('static',filename='health1.png') }}')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -74,24 +75,119 @@
     </div>
   </header>
 
-
-	<header>
-		<div class="h1 text-center font-weight-bolder text-primary">Spam Detector For Email Messages</div>
-		
-	</header>
-
-	<div class="ml-container">
+  </div>
+<div>
     <center>
-		<form action="{{ url_for('predict')}}" method="POST">
-			<p class="text-success font-weight-bolder">Enter Your Message Here</p>
-		<p ></p>
-		<!-- <input type="text" name="comment"/> -->
-		<textarea name="message" rows="6" cols="50"></textarea>
-		<br/>
-		<input type="submit"  class="btn btn-primary active btn-lg" value="predict">
-		
-	</form>
-	</center>	
+      <!..galery>
+<div class="container gallery-container">
+<center>
+    <h1></h1>
+    <h2></h2>
+
+    <p class="page-description text-center"></p>
+</center>  
+
+    <div class="tz-gallery">
+        <center>
+        <div class="row">
+
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="static/heart1.jpg">
+                        <img src="static/heart1.jpg" alt="Park" width="300" height="300">
+                    </a>
+                    <div class="caption">
+                        <h3>Heart disease</h3>
+                        <p>Technology developed using artificial intelligence (AI) could identify people at high risk of a fatal heart attack at least 5 years before it strikes.
+                         </p>
+                          <center>
+                        <a href="{{url_for('main')}}"  type="button" class=" btn btn-warning ">Enter</a>
+                   </center>
+                    </div>
+ 
+                </div>
+            </div>
+
+
+                        <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="static/img/nlp.jpeg">
+                        <img src="static/img/nlp.jpeg" alt="Tuneel" width="300" height="300">
+                    </a>
+                    <div class="caption">
+                        <h3>Online Consultation</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <center>
+                        <a href="" type="button" class=" btn btn-warning ">Enter</a>
+                   </center>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="static/xray1.jpg">
+                        <img src="static/xray1.jpg" alt="Tuneel" width="300" height="300">
+                    </a>
+                    <div class="caption">
+                        <h3>Chest X-Ray Pneumonia</h3>
+                        <p>The artificial intelligence model was able to rapidly identify key findings in chest x-rays of patients with pneumonia.</p>
+                        <center>
+                        <a href="{{url_for('upload')}}" type="button" class=" btn btn-warning ">Enter</a>
+                   </center>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+
+    </div>
+  </center>
+</div>
+
+<div>
+   <a class="lightbox" href="static/abri.png"  style="background-size:cover">
+                        <img  src="static/abri.png" alt="Tuneel" width="1290" height="520">
+                    </a>
+
+</div>
+
+  <div>
+
+    <center>
+      <div class="alert alert-info" role="alert">
+  The Amazing Team
+</div>
+      <img src="static/team.jpg" class="img-fluid" alt="Responsive image">
+
+    </center>
+    
+
+
+
+
+
+  </div>
+
+	
+  <div>
+    
+
+  </div>
+
+  
+
 	</div>
 
 	
@@ -100,19 +196,82 @@
   <script src="{{ url_for('static',filename='jquery.min.js')}}"></script>
   <script src="{{ url_for('static',filename='bootstrap.bundle.min.js')}}"></script>
 
+
+
   <!-- Custom scripts for this template -->
   <script src="{{ url_for('static',filename='clean-blog.min.js')}}"></script>
 
 </body>
 
+  </div>
+  <!-- Copyright -->
+  <div class="container">
+    <h2 class="text-center"></h2>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6 pb-5">
+
+
+                    <!--Form with header-->
+
+                    <form action="mail.php" method="post">
+                        <div class="card border-primary rounded-0">
+                            <div class="card-header p-0">
+                                <div class="bg-info text-white text-center py-2">
+                                    <h3><i class="fa fa-envelope"></i> Contact us</h3>
+                                    <p class="m-0">Welcome to our platform</p>
+                                </div>
+                            </div>
+                            <div class="card-body p-3">
+
+                                <!--Body-->
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-user text-info"></i></div>
+                                        </div>
+                                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-envelope text-info"></i></div>
+                                        </div>
+                                        <input type="email" class="form-control" id="nombre" name="email" placeholder="ejemplo@gmail.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="fa fa-comment text-info"></i></div>
+                                        </div>
+                                        <textarea class="form-control" placeholder="Your message" required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <input type="submit" value="send" class="btn btn-info btn-block rounded-0 py-2">
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                    <!--Form with header-->
+
+
+                </div>
+  </div>
+</div>
+
+
+
 <!-- Footer -->
 <footer class="page-footer font-small blue">
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="https://www.linkedin.com/in/haythem-tellili-5b919616a/"> Haythem Tellili</a>
-  </div>
-  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href=""> Health&AI</a>
 
 </footer>
 <!-- Footer -->
